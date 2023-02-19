@@ -33,6 +33,7 @@ fig = plt.figure(figsize=(15, 8))
 ax = fig.add_subplot(111, projection='3d')
 ax.scatter(x[:, 0], x[:, 1], x[:, 2], c=t, cmap=plt.cm.Spectral)
 ax.view_init(4, -72)
+plt.savefig("Original distribution.png")
 plt.show()
 
 
@@ -58,10 +59,11 @@ print("mds: %.2g sec" % ( t1 - t0))
 fig = plt.figure(figsize=(15, 8))
 ax = fig.add_subplot(111)
 ax.scatter(y[:, 0], y[:, 1], c=t, cmap=plt.cm.Spectral)
-ax.set_title("mds: %.2g sec" % ( t1 - t0))
+ax.set_title("mds dimension reduction: %.2g sec" % ( t1 - t0))
 ax.xaxis.set_major_formatter(NullFormatter())
 ax.yaxis.set_major_formatter(NullFormatter())
 ax.axis('tight')
+plt.savefig("output.png")
 plt.show()
 
 
