@@ -33,8 +33,8 @@ fig = plt.figure(figsize=(15, 8))
 ax = fig.add_subplot(111, projection='3d')
 ax.scatter(x[:, 0], x[:, 1], x[:, 2], c=t, cmap=plt.cm.Spectral)
 ax.view_init(4, -72)
-plt.savefig("Original distribution.png")
-plt.show()
+plt.savefig("Ori_fig.png")
+# plt.show()
 
 
 # dimension reduction to 2D data
@@ -53,7 +53,6 @@ V = vec[:,np.argsort(val)[-1:-3:-1]].real
 y = np.dot(A, V.T).T
 
 t1 = time()
-
 # plot
 print("mds: %.2g sec" % ( t1 - t0))
 fig = plt.figure(figsize=(15, 8))
@@ -64,7 +63,7 @@ ax.xaxis.set_major_formatter(NullFormatter())
 ax.yaxis.set_major_formatter(NullFormatter())
 ax.axis('tight')
 plt.savefig("output.png")
-plt.show()
+# plt.show()
 
 
 # from sklearn import  manifold

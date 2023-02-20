@@ -1,0 +1,3 @@
+Please compile MDS.py for evaluating assignment 1. It implements the MDS algorithm which reduces dimension of a 3D swiss curve to 2D.
+The dataset used is from Swiss roll data from scikit-learn library.
+After compiling (~20s for 2000 data samples), there will be two output figures. 'Ori_fig.png' and 'output.png' stand for the original 3D and processed 2D representation of the input data respectively.
